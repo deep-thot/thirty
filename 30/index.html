@@ -58,7 +58,25 @@
                 <p>Väl ute på ön checkar vi in på våra rum, käkar lunch tillsammans, gör lite kul aktiviteter, och kanske till och med tar ett dopp</p>
                 <p>Därefter blir det middag och party för hela slanten tills solen går ner och försommarnattens dunkel sänker sig över havet</p>
                 <p>Morgonen därpå piggar vi upp oss med en frukostbuffé och njuter lite till av de vackra omgivningarna innan det är dags att packa ihop och ta båten tillbaka till civilisationen.</p>
+                <p><b>Kostnad: 500:- /person</b></p>
             </div>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var mapDiv = document.getElementById('map');
+                    var map = new google.maps.Map(mapDiv, {
+                        center: {lat: 59.861654, lng: 19.123762},
+                        zoom: 9
+                    });
+                    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+                    var marker = new google.maps.Marker({
+                        position: {lat: 59.860654, lng: 19.134862},
+                        map: map,
+                        icon: 'http://maps.google.com/mapfiles/arrow.png'
+                    });
+                }
+            </script>
+
 
             <div class="mastfoot">
                 <div class="inner">
@@ -85,5 +103,7 @@
     ga('send', 'pageview');
 
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 </body>
 </html>
